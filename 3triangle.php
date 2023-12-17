@@ -57,18 +57,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // เรียกใช้ฟังก์ชันและแสดงผลลัพธ์
         $result = classifyTriangle($sideA, $sideB, $sideC);
-        echo "Triangle with sides $sideA, $sideB, $sideC is a $result.";
+        echo "<script> alert('Triangle with sides $sideA, $sideB, $sideC is a $result.')</script>";
     } else {
-        echo "Please enter all three sides of the triangle.";
+        echo "<script> alert('Please enter all three sides of the triangle.')</script>";
     }
 }
 
 ?>
 
 <!-- แบบฟอร์มสำหรับกรอกข้อมูล -->
-<form method="post" action="">
-    Side A: <input type="text" name="sideA" value=""><br>
-    Side B: <input type="text" name="sideB" value=""><br>
-    Side C: <input type="text" name="sideC" value=""><br>
-    <input type="submit" value="Classify Triangle">
+<form method="post" action=""><br>
+    <center>
+    ด้านที่ 1: <input type="text" name="sideA" value=""><br><br>
+    ด้านที่ 2: <input type="text" name="sideB" value=""><br><br>
+    ด้านที่ 3: <input type="text" name="sideC" value=""><br><br>
+    <input type="submit" class="btn btn-success" value="เช็คผลลัพธ์">
+    </center>
 </form>
+</body>
+</html>
